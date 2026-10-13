@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80">
+  <path fill="none" stroke="#d7d0c4" stroke-width="2" d="M20 18h220M20 63h220"/>
+  <path fill="#d7d0c4" d="m22 15 30-8 30 8-30-3zm156 0 30-8 30 8-30-3z"/>
+  <text x="130" y="39" fill="#f2eee6" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" letter-spacing="3">ROYAL</text>
+  <text x="130" y="59" fill="#f2eee6" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" letter-spacing="4">ENFIELD</text>
+</svg>

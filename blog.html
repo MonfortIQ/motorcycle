@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+
+
+  <meta charset="UTF-8">
+  <script>(function(){try{var theme=localStorage.getItem('apex_theme');if(theme==='light'||theme==='dark')document.documentElement.setAttribute('data-theme',theme);var dir=localStorage.getItem('apex_rtl')||localStorage.getItem('direction');if(dir==='rtl'||dir==='ltr')document.documentElement.setAttribute('dir',dir)}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop Journal & Technical Articles | Apex & Iron Co.</title>
+  <meta name="description" content="Technical motorcycle engineering logs, vintage restoration guides, TIG fabrication tips, cafe racer build diaries, and suspension tuning articles from our master mechanics.">
+  <meta name="keywords" content="motorcycle building articles, cafe racer guide, vintage restoration tips, exhaust fabrication, motorcycle suspension setup">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff5500'><path d='M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8L19.5 8 12 11.2 4.5 8 12 4.8zM4 9.6l7 3.7v7.1l-7-3.5V9.6zm9 10.8v-7.1l7-3.7v7.3l-7 3.5z'/></svg>">
+
+  <!-- Bootstrap 5.3 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Master Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="navbar-container">
+    <a class="brand-logo" href="index.html" aria-label="Apex and Iron home">
+      <span class="brand-icon" aria-hidden="true"><i class="bi bi-gear-wide-connected"></i></span>
+      <span class="brand-wordmark">APEX <span class="accent">&amp;</span> IRON</span>
+    </a>
+    <nav class="site-primary-nav" aria-label="Primary navigation">
+      <ul class="navbar-nav">
+<li class="nav-item dropdown">
+    <button class="nav-link dropdown-toggle" type="button" id="desktopHomeMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Home</button>
+    <ul class="dropdown-menu" aria-labelledby="desktopHomeMenu">
+      <li><a class="dropdown-item" href="index.html">Workshop</a></li>
+      <li><a class="dropdown-item" href="home-2.html">Restoration</a></li>
+    </ul>
+  </li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+<li class="nav-item"><a class="nav-link active" href="blog.html" aria-current="page">Blog</a></li>
+<li class="nav-item dropdown">
+    <button class="nav-link dropdown-toggle" type="button" id="desktopPagesMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Pages</button>
+    <ul class="dropdown-menu" aria-labelledby="desktopPagesMenu">
+      <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+<li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
+<li><a class="dropdown-item" href="404.html">404</a></li>
+    </ul>
+  </li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+    </nav>
+    <div class="navbar-actions" aria-label="Display and account actions">
+      <button class="theme-toggle-btn" type="button" aria-label="Toggle color theme" title="Switch theme"><i class="bi bi-sun-fill" aria-hidden="true"></i></button>
+      <button class="rtl-toggle-btn" type="button" aria-label="Switch to right-to-left layout" aria-pressed="false" title="Toggle RTL mode">RTL</button>
+      
+      
+    </div>
+    <div class="mobile-header-actions" aria-label="Mobile display and menu controls">
+      <button class="theme-toggle-btn" type="button" aria-label="Toggle color theme" title="Switch theme"><i class="bi bi-sun-fill" aria-hidden="true"></i></button>
+      <button class="rtl-toggle-btn" type="button" aria-label="Switch to right-to-left layout" aria-pressed="false" title="Toggle RTL mode">RTL</button>
+      
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open navigation menu">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-start site-mobile-menu" tabindex="-1" id="mobileNav" aria-label="Site navigation menu">
+  <div class="offcanvas-header">
+    <a class="brand-logo" href="index.html" aria-label="Apex and Iron home">
+      <span class="brand-icon" aria-hidden="true"><i class="bi bi-gear-wide-connected"></i></span>
+      <span class="brand-wordmark">APEX <span class="accent">&amp;</span> IRON</span>
+    </a>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close navigation menu"></button>
+  </div>
+  <div class="offcanvas-body">
+    <nav aria-label="Mobile primary navigation">
+      <ul class="navbar-nav mobile-nav-list">
+<li class="nav-item dropdown">
+    <button class="nav-link dropdown-toggle" type="button" id="mobileHomeMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Home</button>
+    <ul class="dropdown-menu" aria-labelledby="mobileHomeMenu">
+      <li><a class="dropdown-item" href="index.html">Workshop</a></li>
+      <li><a class="dropdown-item" href="home-2.html">Restoration</a></li>
+    </ul>
+  </li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+<li class="nav-item"><a class="nav-link active" href="blog.html" aria-current="page">Blog</a></li>
+<li class="nav-item dropdown">
+    <button class="nav-link dropdown-toggle" type="button" id="mobilePagesMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Pages</button>
+    <ul class="dropdown-menu" aria-labelledby="mobilePagesMenu">
+      <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+<li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
+<li><a class="dropdown-item" href="404.html">404</a></li>
+    </ul>
+  </li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+    </nav>
+  </div>
+</div>
+
+
+
+
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  
+
+  <!-- ==========================================================================
+       PAGE HERO BANNER
+       ========================================================================== -->
+  <section class="page-hero">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Blog</li>
+        </ol>
+      </nav>
+      <div class="sub-tag">
+        <i class="bi bi-book-half"></i>
+        <span>Engineering Notes</span>
+      </div>
+      <h1 class="display-3 fw-bold mb-3 font-heading">
+        FROM THE <span class="accent">WORKSHOP</span>
+      </h1>
+      <p class="lead text-muted max-w-700">
+        Deep dives into custom motorcycle planning, carburetor jetting, chassis triangulation, vintage engine overhauls, and shop diaries.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BLOG MAIN CONTENT & SIDEBAR
+       ========================================================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Articles Grid (12 Articles) -->
+        <div class="col-lg-8">
+          <div class="row g-4" id="blogGrid">
+            <article class="col-md-6 blog-card-item" data-cat="fabrication" data-search="Fabrication Exhaust design TIG welding Fabrication Heat management">
+              <div class="blog-card">
+                <div class="blog-img-wrap">
+                  <a href="blog-custom-exhaust-fabrication.html" aria-label="Read Why Custom Exhaust Fabrication Matters"><img src="assets/images/blog/custom-exhaust-fabrication.jpg" alt="A fabricator fitting a custom motorcycle exhaust in the workshop" loading="lazy" decoding="async"></a>
+                  <span class="blog-category-tag">Fabrication</span>
+                </div>
+                <div class="blog-card-body">
+                  <div class="blog-meta"><span><i class="bi bi-calendar" aria-hidden="true"></i> Sep 14, 2026</span><span><i class="bi bi-clock" aria-hidden="true"></i> 8 min</span></div>
+                  <h3 class="blog-title"><a href="blog-custom-exhaust-fabrication.html">Why Custom Exhaust Fabrication Matters</a></h3>
+                  <p class="blog-excerpt">A well-built exhaust is shaped around the engine, chassis and rider. Routing, material, weld quality and heat control all affect the finished motorcycle.</p>
+                  <a href="blog-custom-exhaust-fabrication.html" class="link-arrow">Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <a class="blog-card-overlay" href="blog-custom-exhaust-fabrication.html" aria-label="Open Why Custom Exhaust Fabrication Matters"></a>
+              </div>
+            </article>
+            <article class="col-md-6 blog-card-item" data-cat="performance" data-search="Performance Suspension Rider sag Handling Road test">
+              <div class="blog-card">
+                <div class="blog-img-wrap">
+                  <a href="blog-motorcycle-suspension.html" aria-label="Read Understanding Motorcycle Suspension Setup"><img src="assets/images/blog/suspension-setup.jpg" alt="A technician setting up motorcycle rear suspension" loading="lazy" decoding="async"></a>
+                  <span class="blog-category-tag">Performance</span>
+                </div>
+                <div class="blog-card-body">
+                  <div class="blog-meta"><span><i class="bi bi-calendar" aria-hidden="true"></i> Sep 08, 2026</span><span><i class="bi bi-clock" aria-hidden="true"></i> 6 min</span></div>
+                  <h3 class="blog-title"><a href="blog-motorcycle-suspension.html">Understanding Motorcycle Suspension Setup</a></h3>
+                  <p class="blog-excerpt">Set rider sag first, then tune preload, compression and rebound around the motorcycle, rider weight and roads it will see.</p>
+                  <a href="blog-motorcycle-suspension.html" class="link-arrow">Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <a class="blog-card-overlay" href="blog-motorcycle-suspension.html" aria-label="Open Understanding Motorcycle Suspension Setup"></a>
+              </div>
+            </article>
+            <article class="col-md-6 blog-card-item" data-cat="builds" data-search="Custom Builds Custom builds Planning Ergonomics Chassis">
+              <div class="blog-card">
+                <div class="blog-img-wrap">
+                  <a href="blog-custom-build-planning.html" aria-label="Read How We Plan a Complete Custom Motorcycle Build"><img src="assets/images/blog/custom-build-planning.jpg" alt="A custom motorcycle build being planned around a workshop frame jig" loading="lazy" decoding="async"></a>
+                  <span class="blog-category-tag">Custom Builds</span>
+                </div>
+                <div class="blog-card-body">
+                  <div class="blog-meta"><span><i class="bi bi-calendar" aria-hidden="true"></i> Oct 12, 2026</span><span><i class="bi bi-clock" aria-hidden="true"></i> 7 min</span></div>
+                  <h3 class="blog-title"><a href="blog-custom-build-planning.html">How We Plan a Complete Custom Motorcycle Build</a></h3>
+                  <p class="blog-excerpt">A complete build plan connects the rider’s brief to geometry, ergonomics, parts selection, fabrication milestones and a realistic road test.</p>
+                  <a href="blog-custom-build-planning.html" class="link-arrow">Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <a class="blog-card-overlay" href="blog-custom-build-planning.html" aria-label="Open How We Plan a Complete Custom Motorcycle Build"></a>
+              </div>
+            </article>
+            <article class="col-md-6 blog-card-item" data-cat="builds" data-search="Custom Builds Cafe racer Scrambler Style Ergonomics">
+              <div class="blog-card">
+                <div class="blog-img-wrap">
+                  <a href="blog-cafe-racer-vs-scrambler.html" aria-label="Read Cafe Racer vs Scrambler: Which Build Is Right for You?"><img src="assets/images/blog/cafe-racer-vs-scrambler.jpg" alt="Cafe racer and scrambler motorcycles compared in the workshop" loading="lazy" decoding="async"></a>
+                  <span class="blog-category-tag">Custom Builds</span>
+                </div>
+                <div class="blog-card-body">
+                  <div class="blog-meta"><span><i class="bi bi-calendar" aria-hidden="true"></i> Oct 06, 2026</span><span><i class="bi bi-clock" aria-hidden="true"></i> 5 min</span></div>
+                  <h3 class="blog-title"><a href="blog-cafe-racer-vs-scrambler.html">Cafe Racer vs Scrambler: Which Build Is Right for You?</a></h3>
+                  <p class="blog-excerpt">Compare riding posture, wheel and tire choices, suspension travel and everyday use before choosing a cafe racer or scrambler direction.</p>
+                  <a href="blog-cafe-racer-vs-scrambler.html" class="link-arrow">Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <a class="blog-card-overlay" href="blog-cafe-racer-vs-scrambler.html" aria-label="Open Cafe Racer vs Scrambler: Which Build Is Right for You?"></a>
+              </div>
+            </article>
+            <article class="col-md-6 blog-card-item" data-cat="restoration" data-search="Restoration Restoration Inspection Vintage motorcycles Commissioning">
+              <div class="blog-card">
+                <div class="blog-img-wrap">
+                  <a href="blog-vintage-restoration.html" aria-label="Read Restoring a Motorcycle That Hasn&#39;t Run in Years"><img src="assets/images/blog/vintage-motorcycle-restoration.jpg" alt="A vintage motorcycle being carefully restored in a workshop" loading="lazy" decoding="async"></a>
+                  <span class="blog-category-tag">Restoration</span>
+                </div>
+                <div class="blog-card-body">
+                  <div class="blog-meta"><span><i class="bi bi-calendar" aria-hidden="true"></i> Sep 28, 2026</span><span><i class="bi bi-clock" aria-hidden="true"></i> 9 min</span></div>
+                  <h3 class="blog-title"><a href="blog-vintage-restoration.html">Restoring a Motorcycle That Hasn&#39;t Run in Years</a></h3>
+                  <p class="blog-excerpt">A dormant motorcycle needs a careful inspection of its frame, fuel system, engine, brakes and wiring before anyone tries to start it.</p>
+                  <a href="blog-vintage-restoration.html" class="link-arrow">Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <a class="blog-card-overlay" href="blog-vintage-restoration.html" aria-label="Open Restoring a Motorcycle That Hasn&#39;t Run in Years"></a>
+              </div>
+            </article>
+            <article class="col-md-6 blog-card-item" data-cat="workshop" data-search="Workshop Engine rebuild Machine work Measurement Workshop">
+              <div class="blog-card">
+                <div class="blog-img-wrap">
+                  <a href="blog-engine-rebuild.html" aria-label="Read What Goes Into a Full Motorcycle Engine Rebuild?"><img src="assets/images/blog/details/clean-engine-build.jpg" alt="A rebuilt motorcycle engine being assembled on a clean bench" loading="lazy" decoding="async"></a>
+                  <span class="blog-category-tag">Workshop</span>
+                </div>
+                <div class="blog-card-body">
+                  <div class="blog-meta"><span><i class="bi bi-calendar" aria-hidden="true"></i> Sep 21, 2026</span><span><i class="bi bi-clock" aria-hidden="true"></i> 8 min</span></div>
+                  <h3 class="blog-title"><a href="blog-engine-rebuild.html">What Goes Into a Full Motorcycle Engine Rebuild?</a></h3>
+                  <p class="blog-excerpt">A reliable rebuild depends on clean measurement, careful machine work, correct clearances and a documented assembly process.</p>
+                  <a href="blog-engine-rebuild.html" class="link-arrow">Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <a class="blog-card-overlay" href="blog-engine-rebuild.html" aria-label="Open What Goes Into a Full Motorcycle Engine Rebuild?"></a>
+              </div>
+            </article>
+            <article class="col-md-6 blog-card-item" data-cat="fabrication" data-search="Fabrication TIG welding Fabrication Frame work Joint prep">
+              <div class="blog-card">
+                <div class="blog-img-wrap">
+                  <a href="blog-tig-welding.html" aria-label="Read TIG Welding in Custom Motorcycle Fabrication"><img src="assets/images/blog/details/tig-frame-alignment.jpg" alt="A fabricator checking a motorcycle frame fixture during TIG work" loading="lazy" decoding="async"></a>
+                  <span class="blog-category-tag">Fabrication</span>
+                </div>
+                <div class="blog-card-body">
+                  <div class="blog-meta"><span><i class="bi bi-calendar" aria-hidden="true"></i> Sep 18, 2026</span><span><i class="bi bi-clock" aria-hidden="true"></i> 7 min</span></div>
+                  <h3 class="blog-title"><a href="blog-tig-welding.html">TIG Welding in Custom Motorcycle Fabrication</a></h3>
+                  <p class="blog-excerpt">TIG welding gives a fabricator control over thin motorcycle tubing, but joint fit, material preparation and fixture strategy matter just as much.</p>
+                  <a href="blog-tig-welding.html" class="link-arrow">Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <a class="blog-card-overlay" href="blog-tig-welding.html" aria-label="Open TIG Welding in Custom Motorcycle Fabrication"></a>
+              </div>
+            </article>
+            <article class="col-md-6 blog-card-item" data-cat="finishing" data-search="Finishing Custom paint Finishing Coatings Preparation">
+              <div class="blog-card">
+                <div class="blog-img-wrap">
+                  <a href="blog-custom-paint.html" aria-label="Read Choosing the Right Finish for a Custom Motorcycle"><img src="assets/images/blog/paint-finish-guide.jpg" alt="A painter applying a deep metallic finish to a motorcycle fuel tank" loading="lazy" decoding="async"></a>
+                  <span class="blog-category-tag">Finishing</span>
+                </div>
+                <div class="blog-card-body">
+                  <div class="blog-meta"><span><i class="bi bi-calendar" aria-hidden="true"></i> Aug 10, 2026</span><span><i class="bi bi-clock" aria-hidden="true"></i> 5 min</span></div>
+                  <h3 class="blog-title"><a href="blog-custom-paint.html">Choosing the Right Finish for a Custom Motorcycle</a></h3>
+                  <p class="blog-excerpt">Compare paint systems by substrate, use, repairability, heat exposure and the care the finish will need after delivery.</p>
+                  <a href="blog-custom-paint.html" class="link-arrow">Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <a class="blog-card-overlay" href="blog-custom-paint.html" aria-label="Open Choosing the Right Finish for a Custom Motorcycle"></a>
+              </div>
+            </article>
+            <article class="col-md-6 blog-card-item" data-cat="restoration" data-search="Restoration Vintage wiring Electrical Restoration Charging">
+              <div class="blog-card">
+                <div class="blog-img-wrap">
+                  <a href="blog-vintage-wiring.html" aria-label="Read Restoring Vintage Motorcycle Wiring"><img src="assets/images/blog/behind-build-blackline.jpg" alt="A motorcycle undergoing careful electrical and mechanical assembly in the workshop" loading="lazy" decoding="async"></a>
+                  <span class="blog-category-tag">Restoration</span>
+                </div>
+                <div class="blog-card-body">
+                  <div class="blog-meta"><span><i class="bi bi-calendar" aria-hidden="true"></i> Aug 03, 2026</span><span><i class="bi bi-clock" aria-hidden="true"></i> 6 min</span></div>
+                  <h3 class="blog-title"><a href="blog-vintage-wiring.html">Restoring Vintage Motorcycle Wiring</a></h3>
+                  <p class="blog-excerpt">A safe vintage loom starts with a circuit map, sound grounds, protected connections and a plan for charging, lighting and ignition loads.</p>
+                  <a href="blog-vintage-wiring.html" class="link-arrow">Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <a class="blog-card-overlay" href="blog-vintage-wiring.html" aria-label="Open Restoring Vintage Motorcycle Wiring"></a>
+              </div>
+            </article>
+            <article class="col-md-6 blog-card-item" data-cat="performance" data-search="Performance Brakes Performance Brake fluid Safety">
+              <div class="blog-card">
+                <div class="blog-img-wrap">
+                  <a href="blog-brake-upgrades.html" aria-label="Read Motorcycle Brake Upgrades Worth Considering"><img src="assets/images/blog/handling-upgrades.jpg" alt="A technician inspecting motorcycle brake and handling components" loading="lazy" decoding="async"></a>
+                  <span class="blog-category-tag">Performance</span>
+                </div>
+                <div class="blog-card-body">
+                  <div class="blog-meta"><span><i class="bi bi-calendar" aria-hidden="true"></i> Jul 27, 2026</span><span><i class="bi bi-clock" aria-hidden="true"></i> 6 min</span></div>
+                  <h3 class="blog-title"><a href="blog-brake-upgrades.html">Motorcycle Brake Upgrades Worth Considering</a></h3>
+                  <p class="blog-excerpt">Better braking starts with condition and setup. Match pads, rotor, master cylinder and tire grip to the motorcycle before adding parts.</p>
+                  <a href="blog-brake-upgrades.html" class="link-arrow">Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <a class="blog-card-overlay" href="blog-brake-upgrades.html" aria-label="Open Motorcycle Brake Upgrades Worth Considering"></a>
+              </div>
+            </article>
+            <article class="col-md-6 blog-card-item" data-cat="restoration" data-search="Restoration Restomod Restoration Originality Project planning">
+              <div class="blog-card">
+                <div class="blog-img-wrap">
+                  <a href="blog-restomod-vs-restoration.html" aria-label="Read Restomod vs Full Motorcycle Restoration"><img src="assets/images/blog/build-planning-related-thumb.jpg" alt="A classic motorcycle being evaluated for a custom restomod build" loading="lazy" decoding="async"></a>
+                  <span class="blog-category-tag">Restoration</span>
+                </div>
+                <div class="blog-card-body">
+                  <div class="blog-meta"><span><i class="bi bi-calendar" aria-hidden="true"></i> Jul 19, 2026</span><span><i class="bi bi-clock" aria-hidden="true"></i> 7 min</span></div>
+                  <h3 class="blog-title"><a href="blog-restomod-vs-restoration.html">Restomod vs Full Motorcycle Restoration</a></h3>
+                  <p class="blog-excerpt">A restoration preserves originality while a restomod adds selected modern improvements. The right path depends on history, use and ownership goals.</p>
+                  <a href="blog-restomod-vs-restoration.html" class="link-arrow">Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <a class="blog-card-overlay" href="blog-restomod-vs-restoration.html" aria-label="Open Restomod vs Full Motorcycle Restoration"></a>
+              </div>
+            </article>
+            <article class="col-md-6 blog-card-item blog-card-hide-1024" data-cat="fabrication" data-search="Fabrication Frame fabrication Chassis Fixtures TIG welding">
+              <div class="blog-card">
+                <div class="blog-img-wrap">
+                  <a href="blog-frame-fabrication.html" aria-label="Read Inside Our Motorcycle Frame Fabrication Process"><img src="assets/images/blog/details/custom-chassis-planning-hero.jpg" alt="A motorcycle chassis aligned on a frame fixture before fabrication" loading="lazy" decoding="async"></a>
+                  <span class="blog-category-tag">Fabrication</span>
+                </div>
+                <div class="blog-card-body">
+                  <div class="blog-meta"><span><i class="bi bi-calendar" aria-hidden="true"></i> Jul 12, 2026</span><span><i class="bi bi-clock" aria-hidden="true"></i> 8 min</span></div>
+                  <h3 class="blog-title"><a href="blog-frame-fabrication.html">Inside Our Motorcycle Frame Fabrication Process</a></h3>
+                  <p class="blog-excerpt">Frame changes begin with measured datums, a load-path plan and fixture control, followed by inspection before the motorcycle is assembled.</p>
+                  <a href="blog-frame-fabrication.html" class="link-arrow">Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <a class="blog-card-overlay" href="blog-frame-fabrication.html" aria-label="Open Inside Our Motorcycle Frame Fabrication Process"></a>
+              </div>
+            </article>
+            <div class="col-12 text-muted d-none" id="blogNoResults" role="status">No journal articles match your search.</div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar Column -->
+        <div class="col-lg-4">
+          <!-- Search Widget -->
+          <div class="p-4 rounded bg-card border border-subtle mb-4">
+            <h5 class="text-white font-heading mb-3">Search The Journal</h5>
+            <form class="blog-search-form" action="blog.html" method="get" role="search">
+              <div class="input-group">
+                <input type="search" id="blogSearchInput" name="q" class="form-control" placeholder="Search by title, topic..." aria-label="Search articles">
+                <button class="btn btn-apex" type="submit" aria-label="Search articles"><i class="bi bi-search"></i></button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Categories Widget -->
+          <div class="p-4 rounded bg-card border border-subtle mb-4">
+            <h5 class="text-white font-heading mb-3">Categories</h5>
+            <ul class="list-unstyled mb-0 font-mono fs-8">
+              <li class="mb-2"><a href="#" class="blog-filter-cat text-warning active" data-cat="all">All Topics (12)</a></li>
+<li class="mb-2"><a href="#" class="blog-filter-cat text-muted" data-cat="builds">Custom Builds (2)</a></li>
+<li class="mb-2"><a href="#" class="blog-filter-cat text-muted" data-cat="restoration">Restoration (3)</a></li>
+<li class="mb-2"><a href="#" class="blog-filter-cat text-muted" data-cat="fabrication">Fabrication (3)</a></li>
+<li class="mb-2"><a href="#" class="blog-filter-cat text-muted" data-cat="performance">Performance (2)</a></li>
+<li class="mb-2"><a href="#" class="blog-filter-cat text-muted" data-cat="workshop">Workshop (1)</a></li>
+<li class="mb-2"><a href="#" class="blog-filter-cat text-muted" data-cat="finishing">Finishing (1)</a></li>
+            </ul>
+          </div>
+
+          <!-- Recent Posts Widget -->
+          <div class="p-4 rounded bg-card border border-subtle mb-4">
+            <h5 class="text-white font-heading mb-3">Recent Posts</h5>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex align-items-center gap-3">
+                <img src="assets/images/blog/custom-exhaust-fabrication.jpg" alt="A fabricator fitting a custom motorcycle exhaust in the workshop" class="recent-post-thumb rounded" loading="lazy" decoding="async">
+                <div><a href="blog-custom-exhaust-fabrication.html" class="text-white font-heading fs-8 d-block mb-1">Why Custom Exhaust Fabrication Matters</a><small class="text-muted font-mono fs-8">Sep 14, 2026</small></div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <img src="assets/images/blog/suspension-setup.jpg" alt="A technician setting up motorcycle rear suspension" class="recent-post-thumb rounded" loading="lazy" decoding="async">
+                <div><a href="blog-motorcycle-suspension.html" class="text-white font-heading fs-8 d-block mb-1">Understanding Motorcycle Suspension Setup</a><small class="text-muted font-mono fs-8">Sep 08, 2026</small></div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <img src="assets/images/blog/custom-build-planning.jpg" alt="A custom motorcycle build being planned around a workshop frame jig" class="recent-post-thumb rounded" loading="lazy" decoding="async">
+                <div><a href="blog-custom-build-planning.html" class="text-white font-heading fs-8 d-block mb-1">How We Plan a Complete Custom Motorcycle Build</a><small class="text-muted font-mono fs-8">Oct 12, 2026</small></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tags Cloud -->
+          <div class="p-4 rounded bg-card border border-subtle">
+            <h5 class="text-white font-heading mb-3">Popular Tags</h5>
+            <div class="d-flex flex-wrap gap-2 font-mono fs-8">
+              <span class="badge bg-surface border border-secondary text-muted">#CB750</span>
+              <span class="badge bg-surface border border-secondary text-muted">#TIGWelding</span>
+              <span class="badge bg-surface border border-secondary text-muted">#Motogadget</span>
+              <span class="badge bg-surface border border-secondary text-muted">#WisecoPistons</span>
+              <span class="badge bg-surface border border-secondary text-muted">#Öhlins</span>
+              <span class="badge bg-surface border border-secondary text-muted">#Brembo</span>
+              <span class="badge bg-surface border border-secondary text-muted">#Airhead</span>
+              <span class="badge bg-surface border border-secondary text-muted">#DynoTune</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <section class="footer-column footer-brand" aria-labelledby="footerBrandTitle">
+        <a class="brand-logo footer-brand-logo" href="index.html" aria-label="Apex and Iron home">
+          <span class="brand-icon" aria-hidden="true"><i class="bi bi-gear-wide-connected"></i></span>
+          <span class="brand-wordmark" id="footerBrandTitle">APEX <span class="accent">&amp;</span> IRON</span>
+        </a>
+        <p class="footer-description">Custom motorcycle builds, precision fabrication and vintage restoration engineered with purpose, character and craftsmanship.</p>
+        <nav class="footer-social-links" aria-label="Social media">
+          <a href="https://www.instagram.com/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+          <a href="https://www.pinterest.com/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="bi bi-pinterest" aria-hidden="true"></i></a>
+        </nav>
+      </section>
+
+      <nav class="footer-column" aria-labelledby="footerQuickLinksTitle">
+        <h2 class="footer-widget-title" id="footerQuickLinksTitle">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home-2.html">Home 2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-column" aria-labelledby="footerServicesTitle">
+        <h2 class="footer-widget-title" id="footerServicesTitle">Workshop Services</h2>
+        <ul class="footer-links">
+          <li><a href="service-custom-motorcycle-builds.html">Custom Motorcycle Builds</a></li>
+          <li><a href="service-vintage-restoration.html">Vintage Motorcycle Restoration</a></li>
+          <li><a href="service-metal-fabrication.html">Metal Fabrication</a></li>
+          <li><a href="service-tig-welding.html">TIG Welding</a></li>
+          <li><a href="service-frame-fabrication.html">Frame Fabrication</a></li>
+          <li><a href="service-engine-rebuild.html">Engine Rebuilding</a></li>
+          <li><a href="service-custom-exhaust.html">Custom Exhaust</a></li>
+          <li><a href="service-suspension-setup.html">Suspension Setup</a></li>
+        </ul>
+      </nav>
+
+      <section class="footer-column footer-contact" aria-labelledby="footerContactTitle">
+        <h2 class="footer-widget-title" id="footerContactTitle">Apex &amp; Iron Atelier</h2>
+        <address>
+          <p><i class="bi bi-geo-alt" aria-hidden="true"></i><span>742 Ironworks Blvd<br>Industrial District, NY 10001</span></p>
+          <p><i class="bi bi-telephone" aria-hidden="true"></i><a href="tel:+18005552739">+1 (800) 555-APEX / 2739</a></p>
+          <p><i class="bi bi-envelope" aria-hidden="true"></i><a href="mailto:builds@apexandiron.com">builds@apexandiron.com</a></p>
+        </address>
+        <div class="footer-hours">
+          <h3><i class="bi bi-clock" aria-hidden="true"></i> Workshop Hours</h3>
+          <p><span>Mon–Fri</span><span>08:30–18:30</span></p>
+          <p><span>Saturday</span><span>09:00–15:00</span></p>
+          <p><span>Sunday</span><span>By appointment</span></p>
+        </div>
+        <a href="contact.html#project-enquiry" class="btn-apex footer-project-cta"><span>Start a Project</span><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      </section>
+    </div>
+
+    <section class="footer-newsletter" aria-labelledby="footerNewsletterTitle">
+      <div class="footer-newsletter-copy">
+        <h2 class="footer-widget-title" id="footerNewsletterTitle">Workshop Dispatch</h2>
+        <p>Build notes, workshop stories and new project updates.</p>
+      </div>
+      <form action="https://formsubmit.co/clament.iq@outlook.com" method="POST" class="formsubmit-ajax footer-newsletter-form">
+        <input type="hidden" name="_subject" value="Apex & Iron Newsletter Signup">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="form-honeypot">
+        <div class="footer-newsletter-entry">
+          <input type="email" name="email" class="form-control" placeholder="Your email address" aria-label="Email address for workshop updates" autocomplete="email" required>
+          <button type="submit" class="btn-apex"><span>Subscribe</span><i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+        </div>
+        <div class="form-feedback" data-form-feedback role="status" aria-live="polite" tabindex="-1" hidden></div>
+      </form>
+    </section>
+
+    <div class="footer-bottom">
+      <p>© 2026 Apex &amp; Iron. All rights reserved.</p>
+      <nav aria-label="Legal and accessibility links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="accessibility.html">Accessibility</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+  <button class="scroll-top-btn" type="button" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80">
+  <circle cx="42" cy="38" r="34" fill="#dfe3e8"/>
+  <circle cx="42" cy="38" r="29" fill="#111318"/>
+  <path fill="#63a9e8" d="M42 13h25v25H42zM17 38h25v25H17z"/>
+  <path fill="#fff" d="M17 13h25v25H17zM42 38h25v25H42z"/>
+  <circle cx="42" cy="38" r="3" fill="#111318"/>
+  <text x="42" y="13" fill="#111318" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="900" letter-spacing="1">BMW</text>
+  <text x="166" y="39" fill="#e8edf4" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-style="italic" font-weight="900" letter-spacing="1">BMW</text>
+  <text x="166" y="61" fill="#63a9e8" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3">MOTORRAD</text>
+</svg>

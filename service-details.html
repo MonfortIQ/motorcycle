@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,follow">
+  <title>Workshop Services | Apex &amp; Iron</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      const legacyRoutes = {
+        'custom-builds': 'service-custom-motorcycle-builds.html',
+        'vintage-restoration': 'service-vintage-restoration.html',
+        fabrication: 'service-metal-fabrication.html',
+        'engine-rebuild': 'service-engine-rebuild.html',
+        performance: 'service-dyno-road-testing.html',
+        suspension: 'service-suspension-setup.html',
+        paint: 'service-custom-paint.html',
+        wiring: 'service-electrical-wiring.html',
+        exhaust: 'service-custom-exhaust.html',
+        detailing: 'service-motorcycle-detailing.html'
+      };
+      const requestedService = new URLSearchParams(window.location.search).get('service');
+      const destination = legacyRoutes[requestedService] || 'services.html';
+      window.location.replace(destination);
+    }());
+  </script>
+</head>
+<body>
+  <main class="container section-padding">
+    <h1>Workshop services</h1>
+    <p>This service link has moved. <a href="services.html">Browse all workshop services</a>.</p>
+  </main>
+</body>
+</html>

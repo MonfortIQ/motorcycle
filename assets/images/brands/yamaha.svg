@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80">
+  <circle cx="43" cy="40" r="28" fill="none" stroke="#e60012" stroke-width="4"/>
+  <path fill="none" stroke="#e60012" stroke-width="3" stroke-linecap="round" d="M43 18v29m-17-9 25-14m-8 28 17 10M26 38l25 15m-8-35 17 10"/>
+  <text x="163" y="52" fill="#e60012" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" font-style="italic" font-weight="900" letter-spacing="1">YAMAHA</text>
+</svg>

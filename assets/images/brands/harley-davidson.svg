@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80">
+  <path fill="#f16f21" d="M130 4 248 18v38l-118 20L12 56V18z"/>
+  <path fill="#111318" d="M130 10 240 23v27L130 68 20 50V23z"/>
+  <path fill="#f16f21" d="M25 27h210v4H25zm0 16h210v4H25z"/>
+  <text x="130" y="27" fill="#fff" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="800" letter-spacing="2">HARLEY</text>
+  <text x="130" y="58" fill="#fff" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="800" letter-spacing="2">DAVIDSON</text>
+</svg>

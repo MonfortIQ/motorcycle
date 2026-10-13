@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80">
+  <path fill="#d95050" d="M14 11h232v48l-116 17L14 59z"/>
+  <path fill="#111318" d="M22 18h216v35L130 68 22 53z"/>
+  <path fill="#d95050" d="M22 29h216v3H22zm0 12h216v3H22z"/>
+  <text x="130" y="29" fill="#fff" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" letter-spacing="4">INDIAN</text>
+  <text x="130" y="56" fill="#fff" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="4">MOTORCYCLE</text>
+</svg>
