@@ -40,10 +40,10 @@
 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
 <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link active" href="pricing.html" aria-current="page">Pricing</a></li>
 <li class="nav-item dropdown">
-    <button class="nav-link dropdown-toggle active" type="button" id="desktopPagesMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Pages</button>
+    <button class="nav-link dropdown-toggle" type="button" id="desktopPagesMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Pages</button>
     <ul class="dropdown-menu" aria-labelledby="desktopPagesMenu">
-      <li><a class="dropdown-item active" href="pricing.html" aria-current="page">Pricing</a></li>
 <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
 <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
 <li><a class="dropdown-item" href="404.html">404</a></li>
@@ -91,10 +91,10 @@
 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
 <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link active" href="pricing.html" aria-current="page">Pricing</a></li>
 <li class="nav-item dropdown">
-    <button class="nav-link dropdown-toggle active" type="button" id="mobilePagesMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Pages</button>
+    <button class="nav-link dropdown-toggle" type="button" id="mobilePagesMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Pages</button>
     <ul class="dropdown-menu" aria-labelledby="mobilePagesMenu">
-      <li><a class="dropdown-item active" href="pricing.html" aria-current="page">Pricing</a></li>
 <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
 <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
 <li><a class="dropdown-item" href="404.html">404</a></li>
@@ -118,7 +118,7 @@
   <!-- ==========================================================================
        PAGE HERO BANNER
        ========================================================================== -->
-  <section class="page-hero">
+  <section class="page-hero" style="--hero-image: url('../assets/images/services/cta/suspension-workshop-background.jpg');">
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -150,92 +150,72 @@
         </div>
       </div>
 
-      <div class="row g-4">
+      <div class="pricing-grid" aria-label="Build packages">
         <!-- Tier 1: Workshop Evaluation & Consultation -->
-        <div class="col-lg-3 col-md-6">
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <span class="font-mono fs-8 text-muted text-uppercase d-block mb-1">Pre-Build Phase</span>
-              <h3 class="pricing-title">Atelier Consultation</h3>
-              <p class="fs-8 text-muted mb-0">In-depth donor motorcycle health inspection and design roadmap.</p>
-              <div class="pricing-rate">$450 <span>/ flat fee</span></div>
+        <div class="pricing-grid__item">
+          <article class="pricing-card">
+            <div class="pricing-card__header pricing-header">
+              <span class="pricing-card__category font-mono fs-8 text-muted text-uppercase">Pre-Build Phase</span>
+              <h3 class="pricing-card__title pricing-title">Atelier Consultation</h3>
+              <p class="pricing-card__description fs-8 text-muted">In-depth donor motorcycle inspection, mechanical health assessment and design roadmap.</p>
+              <div class="pricing-card__price-wrap pricing-rate"><span class="pricing-card__price">$450</span><span class="pricing-card__price-note">flat fee</span></div>
             </div>
-            <ul class="pricing-features-list">
-              <li><i class="bi bi-check2"></i> Laser chassis alignment test</li>
-              <li><i class="bi bi-check2"></i> Cylinder compression & leakdown</li>
-              <li><i class="bi bi-check2"></i> Rider ergonomic triangle fitting</li>
-              <li><i class="bi bi-check2"></i> 1:1 CAD stance rendering</li>
-              <li><i class="bi bi-check2"></i> Itemized parts quote ledger</li>
-              <li><i class="bi bi-check2"></i> Credited toward your build</li>
+            <ul class="pricing-card__features pricing-features-list">
+              <li class="pricing-card__feature"><i class="bi bi-check2" aria-hidden="true"></i><span>Initial motorcycle inspection</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2" aria-hidden="true"></i><span>Compression evaluation</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2" aria-hidden="true"></i><span>Frame and chassis assessment</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2" aria-hidden="true"></i><span>Build consultation</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2" aria-hidden="true"></i><span>Initial design direction</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2" aria-hidden="true"></i><span>Estimated project roadmap</span></li>
             </ul>
-            <a href="contact.html#enquiry" class="btn-apex-outline w-100 text-center">Book Consultation</a>
-          </div>
+            <a href="contact.html#enquiry" class="pricing-card__cta btn-apex-outline w-100 text-center">Book Consultation</a>
+          </article>
         </div>
 
         <!-- Tier 2: Restoration Package -->
-        <div class="col-lg-3 col-md-6">
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <span class="font-mono fs-8 text-muted text-uppercase d-block mb-1">Heritage Focus</span>
-              <h3 class="pricing-title">Vintage Restoration</h3>
-              <p class="fs-8 text-muted mb-0">Concours restoration for iconic Japanese, British, and German classics.</p>
-              <div class="pricing-rate">$8,500 <span>/ starting</span></div>
+        <div class="pricing-grid__item">
+          <article class="pricing-card">
+            <div class="pricing-card__header pricing-header">
+              <span class="pricing-card__category font-mono fs-8 text-muted text-uppercase">Heritage Focus</span>
+              <h3 class="pricing-card__title pricing-title">Vintage Restoration</h3>
+              <p class="pricing-card__description fs-8 text-muted">Complete restoration planning for classic Japanese, British, European and American motorcycles.</p>
+              <div class="pricing-card__price-wrap pricing-rate"><span class="pricing-card__price">$8,500</span><span class="pricing-card__price-note">/ starting</span></div>
             </div>
-            <ul class="pricing-features-list">
-              <li><i class="bi bi-check2"></i> Complete teardown to bare frame</li>
-              <li><i class="bi bi-check2"></i> Engine rebuild & vapor blasting</li>
-              <li><i class="bi bi-check2"></i> OEM cadmium/zinc hardware plating</li>
-              <li><i class="bi bi-check2"></i> Period-correct factory paint</li>
-              <li><i class="bi bi-check2"></i> Rebuilt carburetors & stators</li>
-              <li><i class="bi bi-check2"></i> 250km shakedown road testing</li>
+            <ul class="pricing-card__features pricing-features-list">
+              <li class="pricing-card__feature"><i class="bi bi-check2" aria-hidden="true"></i><span>Complete teardown</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2" aria-hidden="true"></i><span>Engine condition assessment</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2" aria-hidden="true"></i><span>Frame restoration</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2" aria-hidden="true"></i><span>Electrical restoration</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2" aria-hidden="true"></i><span>Vintage parts sourcing</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2" aria-hidden="true"></i><span>Paint and finishing</span></li>
             </ul>
-            <a href="contact.html#enquiry" class="btn-apex-outline w-100 text-center">Commission Restore</a>
-          </div>
+            <a href="contact.html#enquiry" class="pricing-card__cta btn-apex-outline w-100 text-center">Discuss Restoration</a>
+          </article>
         </div>
 
         <!-- Tier 3: Complete Custom Build (FEATURED) -->
-        <div class="col-lg-3 col-md-6">
-          <div class="pricing-card featured">
-            <div class="pricing-featured-badge">Most Popular Commission</div>
-            <div class="pricing-header">
-              <span class="font-mono fs-8 text-warning text-uppercase d-block mb-1">Signature Atelier</span>
-              <h3 class="pricing-title text-white">Full Custom Build</h3>
-              <p class="fs-8 text-muted mb-0">Bespoke ground-up cafe racer, scrambler, or aggressive bobber.</p>
-              <div class="pricing-rate text-warning">$14,500 <span>/ starting</span></div>
+        <div class="pricing-grid__item">
+          <article class="pricing-card pricing-card--featured featured">
+            <div class="pricing-card__badge pricing-featured-badge">Most Popular</div>
+            <div class="pricing-card__header pricing-header">
+              <span class="pricing-card__category font-mono fs-8 text-warning text-uppercase">Signature Atelier</span>
+              <h3 class="pricing-card__title pricing-title text-white">Full Custom Build</h3>
+              <p class="pricing-card__description fs-8 text-muted">Bespoke ground-up cafe racer, scrambler, bobber or restomod motorcycle project.</p>
+              <div class="pricing-card__price-wrap pricing-rate text-warning"><span class="pricing-card__price">$14,500</span><span class="pricing-card__price-note">/ starting</span></div>
             </div>
-            <ul class="pricing-features-list">
-              <li><i class="bi bi-check2-circle text-warning"></i> Hand-formed alloy tank or bodywork</li>
-              <li><i class="bi bi-check2-circle text-warning"></i> 4130 chromoly custom subframe loop</li>
-              <li><i class="bi bi-check2-circle text-warning"></i> Motogadget m-Unit Blue wire loom</li>
-              <li><i class="bi bi-check2-circle text-warning"></i> Upgraded suspension & disc brakes</li>
-              <li><i class="bi bi-check2-circle text-warning"></i> Pie-cut stainless custom exhaust</li>
-              <li><i class="bi bi-check2-circle text-warning"></i> Multi-stage custom paint & powder</li>
-              <li><i class="bi bi-check2-circle text-warning"></i> 500km road testing & photo book</li>
+            <ul class="pricing-card__features pricing-features-list">
+              <li class="pricing-card__feature"><i class="bi bi-check2-circle text-warning" aria-hidden="true"></i><span>Complete concept development</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2-circle text-warning" aria-hidden="true"></i><span>Custom frame/subframe work</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2-circle text-warning" aria-hidden="true"></i><span>Hand-formed tank/bodywork</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2-circle text-warning" aria-hidden="true"></i><span>Electrical and wiring</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2-circle text-warning" aria-hidden="true"></i><span>Engine and performance setup</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2-circle text-warning" aria-hidden="true"></i><span>Paint and finishing</span></li>
+              <li class="pricing-card__feature"><i class="bi bi-check2-circle text-warning" aria-hidden="true"></i><span>Final road testing</span></li>
             </ul>
-            <a href="contact.html#enquiry" class="btn-apex w-100 text-center">Start Custom Build</a>
-          </div>
+            <a href="contact.html#enquiry" class="pricing-card__cta btn-apex w-100 text-center">Start Your Build</a>
+          </article>
         </div>
 
-        <!-- Tier 4: Track & Performance Weapon -->
-        <div class="col-lg-3 col-md-6">
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <span class="font-mono fs-8 text-muted text-uppercase d-block mb-1">Race & Track</span>
-              <h3 class="pricing-title">Track Weapon Spec</h3>
-              <p class="fs-8 text-muted mb-0">Maximum horsepower, weight reduction, and telemetry setup.</p>
-              <div class="pricing-rate">$21,000 <span>/ starting</span></div>
-            </div>
-            <ul class="pricing-features-list">
-              <li><i class="bi bi-check2"></i> High-compression forged pistons</li>
-              <li><i class="bi bi-check2"></i> Full Öhlins USD forks & race shock</li>
-              <li><i class="bi bi-check2"></i> Brembo Monobloc radial brake setup</li>
-              <li><i class="bi bi-check2"></i> Full titanium exhaust header</li>
-              <li><i class="bi bi-check2"></i> Carbon fiber fenders & bodywork</li>
-              <li><i class="bi bi-check2"></i> SuperFlow dyno mapping & telemetry</li>
-            </ul>
-            <a href="contact.html#enquiry" class="btn-apex-outline w-100 text-center">Enquire Track Spec</a>
-          </div>
-        </div>
       </div>
     </div>
   </section>
