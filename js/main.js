@@ -7,6 +7,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initRTL();
+  initPageHeroImages();
   initStickyHeader();
   initScrollTop();
   initBeforeAfterSlider();
@@ -15,8 +16,37 @@ document.addEventListener('DOMContentLoaded', () => {
   initBlogFilter();
   initStatsCounter();
   initCountdownTimer();
+  initFormValidation();
   initFormSubmitHandler();
 });
+
+/* ===========================================================================
+   PAGE HERO IMAGES
+   Render the configured hero image as a real image element so it remains
+   visible above the section background in both themes and on every page.
+   ========================================================================== */
+function initPageHeroImages() {
+  document.querySelectorAll('.page-hero').forEach(hero => {
+    if (hero.querySelector('.page-hero-media')) return;
+
+    const inlineStyle = hero.getAttribute('style') || '';
+    const imageMatch = inlineStyle.match(/--hero-image\s*:\s*url\(\s*(['"]?)(.*?)\1\s*\)/);
+    if (!imageMatch || !imageMatch[2]) return;
+
+    const media = document.createElement('div');
+    media.className = 'page-hero-media';
+    media.setAttribute('aria-hidden', 'true');
+
+    const image = document.createElement('img');
+    image.src = imageMatch[2];
+    image.alt = '';
+    image.loading = 'eager';
+    image.decoding = 'async';
+
+    media.appendChild(image);
+    hero.prepend(media);
+  });
+}
 
 /* ==========================================================================
    THEME TOGGLE (DARK / LIGHT) WITH LOCALSTORAGE PERSISTENCE
@@ -471,16 +501,170 @@ function initCountdownTimer() {
 /* ==========================================================================
    FORMSUBMIT CLIENT-SIDE VALIDATION & FEEDBACK
    ========================================================================== */
+function getValidationControls(form) {
+  return Array.from(form.querySelectorAll(
+    'input:not([type="hidden"]):not([type="submit"]):not([type="button"]):not([type="reset"]), select, textarea'
+  ));
+}
+
+function getFieldValue(field) {
+  return field.type === 'checkbox' || field.type === 'radio'
+    ? field.checked
+    : field.value.trim();
+}
+
+function sanitizeFieldInput(field) {
+  if (field.name === 'phone' || field.id === 'clientPhone') {
+    field.value = field.value.replace(/\D/g, '').slice(0, 15);
+  }
+}
+
+function applyCustomFieldRules(field) {
+  field.setCustomValidity('');
+  const value = getFieldValue(field);
+  if (!value) return;
+
+  if (field.name === 'name' && String(value).length < 2) {
+    field.setCustomValidity('Please enter your full name.');
+  }
+
+  if (field.name === 'year' || field.id === 'bikeYear') {
+    const year = Number(value);
+    const currentYear = new Date().getFullYear();
+    if (!/^\d{4}$/.test(String(value)) || year < 1880 || year > currentYear + 1) {
+      field.setCustomValidity(`Enter a valid model year between 1880 and ${currentYear + 1}.`);
+    }
+  }
+}
+
+function getFieldValidationMessage(field) {
+  if (field.validity.valueMissing) {
+    return field.type === 'checkbox'
+      ? 'Please confirm this information before continuing.'
+      : 'This field is required.';
+  }
+  if (field.validity.typeMismatch) {
+    return field.type === 'email' ? 'Enter a valid email address.' : 'Enter a valid value.';
+  }
+  if (field.validity.patternMismatch) return 'Use the format shown in the example.';
+  if (field.validity.tooShort) return `Enter at least ${field.minLength} characters.`;
+  if (field.validity.tooLong) return `Use no more than ${field.maxLength} characters.`;
+  if (field.validity.rangeUnderflow || field.validity.rangeOverflow) return 'Enter a value in the allowed range.';
+  if (field.validity.customError) return field.validationMessage;
+  return 'Please check this field.';
+}
+
+function getFieldFeedback(field) {
+  const wrapper = field.closest('.form-check') || field.parentElement;
+  if (!wrapper) return null;
+
+  let feedback = wrapper.querySelector('.form-validation-message');
+  if (!feedback) {
+    feedback = wrapper.querySelector('.invalid-feedback');
+  }
+  if (!feedback) {
+    feedback = document.createElement('div');
+    feedback.className = 'form-validation-message';
+    if (field.type === 'checkbox' || field.type === 'radio') {
+      wrapper.appendChild(feedback);
+    } else {
+      field.insertAdjacentElement('afterend', feedback);
+    }
+  }
+  feedback.classList.add('form-validation-message');
+  feedback.setAttribute('aria-live', 'polite');
+  if (!feedback.id) {
+    const formIndex = Array.from(document.forms).indexOf(field.form);
+    feedback.id = `${field.name || field.id || 'field'}-validation-message-${formIndex}`;
+  }
+  field.setAttribute('aria-describedby', feedback.id);
+  return feedback;
+}
+
+function validateField(field, showMessage = false) {
+  applyCustomFieldRules(field);
+  const valid = field.checkValidity();
+  const hasValue = Boolean(getFieldValue(field));
+
+  if (showMessage) {
+    field.classList.toggle('is-invalid', !valid);
+    field.classList.toggle('is-valid', valid && hasValue);
+    field.setAttribute('aria-invalid', String(!valid));
+
+    const feedback = getFieldFeedback(field);
+    if (feedback) {
+      feedback.hidden = valid;
+      feedback.textContent = valid ? '' : getFieldValidationMessage(field);
+    }
+  }
+
+  return valid;
+}
+
+function validateForm(form) {
+  const controls = getValidationControls(form);
+  let firstInvalid = null;
+  controls.forEach(field => {
+    if (!validateField(field, true) && !firstInvalid) firstInvalid = field;
+  });
+
+  if (firstInvalid) {
+    form.classList.add('was-validated');
+    firstInvalid.focus({ preventScroll: true });
+    firstInvalid.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    return false;
+  }
+
+  return true;
+}
+
+function resetFormValidation(form) {
+  getValidationControls(form).forEach(field => {
+    field.setCustomValidity('');
+    field.classList.remove('is-invalid', 'is-valid');
+    field.removeAttribute('aria-invalid');
+    const feedback = getFieldFeedback(field);
+    if (feedback) {
+      feedback.hidden = true;
+      feedback.textContent = '';
+    }
+  });
+}
+
+function initFormValidation() {
+  document.querySelectorAll('form').forEach(form => {
+    const controls = getValidationControls(form);
+    if (!controls.length) return;
+
+    form.noValidate = true;
+    controls.forEach(field => {
+      field.addEventListener('beforeinput', event => {
+        if ((field.name === 'phone' || field.id === 'clientPhone') && event.data && /\D/.test(event.data)) {
+          event.preventDefault();
+        }
+      });
+      field.addEventListener('blur', () => validateField(field, true));
+      field.addEventListener('input', () => {
+        sanitizeFieldInput(field);
+        if (form.classList.contains('was-validated') || field.classList.contains('is-invalid')) {
+          validateField(field, true);
+        }
+      });
+      field.addEventListener('change', () => validateField(field, form.classList.contains('was-validated')));
+    });
+
+    form.addEventListener('submit', event => {
+      if (!validateForm(form)) event.preventDefault();
+    });
+  });
+}
+
 function initFormSubmitHandler() {
   document.querySelectorAll('.formsubmit-ajax').forEach(form => {
     form.addEventListener('submit', async event => {
       event.preventDefault();
       if (form.dataset.submitting === 'true') return;
-      if (!form.checkValidity()) {
-        form.classList.add('was-validated');
-        form.reportValidity();
-        return;
-      }
+      if (!validateForm(form)) return;
 
       const submitButton = form.querySelector('[type="submit"]');
       const feedback = form.querySelector('[data-form-feedback]');
@@ -521,6 +705,7 @@ function initFormSubmitHandler() {
 
         form.reset();
         form.classList.remove('was-validated');
+        resetFormValidation(form);
         if (feedback) {
           feedback.hidden = false;
           feedback.className = 'form-feedback mt-3 is-success';

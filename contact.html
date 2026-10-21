@@ -55,6 +55,7 @@
     <div class="navbar-actions" aria-label="Display and account actions">
       <button class="theme-toggle-btn" type="button" aria-label="Toggle color theme" title="Switch theme"><i class="bi bi-sun-fill" aria-hidden="true"></i></button>
       <button class="rtl-toggle-btn" type="button" aria-label="Switch to right-to-left layout" aria-pressed="false" title="Toggle RTL mode">RTL</button>
+      <a class="btn-apex btn-apex-sm nav-build-cta" href="contact.html#enquiry"><span>Start Your Build</span><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
       
       
     </div>
@@ -103,6 +104,9 @@
 <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
 </ul>
     </nav>
+    <div class="mobile-home-nav-ctas" aria-label="Project enquiry shortcuts">
+      <a class="btn-apex" href="contact.html#enquiry"><span>Start Your Build</span><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
   </div>
 </div>
 
@@ -118,7 +122,7 @@
   <!-- ==========================================================================
        PAGE HERO BANNER
        ========================================================================== -->
-  <section class="page-hero" style="--hero-image: url('../assets/images/contact/atelier-location.jpg');">
+  <section class="page-hero" style="--hero-image: url('assets/images/contact/atelier-location.jpg');">
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -220,7 +224,7 @@
                 </div>
                 <div class="col-md-6">
                   <label class="form-label" for="clientPhone">Telephone Number *</label>
-                  <input type="tel" id="clientPhone" name="phone" class="form-control" placeholder="+1 (555) 019-2834" pattern="[+0-9().\s-]{7,}" required>
+                  <input type="tel" id="clientPhone" name="phone" class="form-control" placeholder="5550192834" inputmode="numeric" autocomplete="tel" pattern="[0-9]{7,15}" minlength="7" maxlength="15" title="Enter 7 to 15 digits only" required>
                   <div class="invalid-feedback">Please enter your contact phone number.</div>
                 </div>
                 <div class="col-md-6">
@@ -338,14 +342,23 @@
 
         <!-- Sidebar: Atelier Map & FAQ Preview -->
         <div class="col-lg-4">
-          <!-- Stylized Map Widget -->
-          <div class="editorial-img-frame mb-4" style="height: 280px; position: relative;">
-            <img src="assets/images/contact/atelier-location.jpg" alt="Brick motorcycle atelier with custom bikes visible in the open workshop" style="height: 100%; width: 100%; object-fit: cover; filter: grayscale(80%) contrast(120%);" loading="lazy" decoding="async">
-            <div class="editorial-stamp" style="bottom: 15px; right: 15px;">
-              <div class="font-mono fs-8 text-warning"><i class="bi bi-geo-fill"></i> NY WORKSHOP</div>
-              <small class="text-muted">Visitor entrance via Bay 4</small>
+          <!-- Live Workshop Map -->
+          <section class="contact-map-section mb-4" aria-labelledby="workshopLocationTitle">
+            <div class="sub-tag mb-2"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Workshop Location</div>
+            <h2 class="h4 font-heading mb-3" id="workshopLocationTitle">VISIT THE ATELIER</h2>
+            <div class="contact-map-frame">
+              <iframe
+                title="Apex and Iron workshop location in New York"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-74.0200%2C40.7000%2C-73.9800%2C40.7300&amp;layer=mapnik&amp;marker=40.7128%2C-74.0060"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
             </div>
-          </div>
+            <div class="contact-map-details">
+              <div><i class="bi bi-pin-map-fill" aria-hidden="true"></i><span>New York Workshop · Bay 4</span></div>
+              <a href="https://www.openstreetmap.org/?mlat=40.7128&amp;mlon=-74.0060#map=15/40.7128/-74.0060" target="_blank" rel="noopener noreferrer">Open larger map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+          </section>
 
           <!-- Quick FAQ Box -->
           <div class="p-4 rounded bg-card border border-subtle mb-4">
